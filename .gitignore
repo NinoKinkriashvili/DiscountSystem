@@ -1,0 +1,26 @@
+# macOS
+.DS_Store
+
+# build outputs
+**/bin/
+**/obj/
+**/packages/
+
+# Rider / JetBrains
+.idea/
+**/.idea/
+riderModule.iml
+
+# ReSharper caches
+/_ReSharper.Caches/
+**/_ReSharper.Caches/
+
+# user-specific files
+*.user
+*.suo
+
+# dev secrets (per project)
+**/appsettings.Development.json
+
+# (ONLY if you really want to exclude this file)
+DiscountsSystem.Infrastructure/DiscountsDbContextFactory.cs

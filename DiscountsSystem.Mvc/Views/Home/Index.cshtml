@@ -1,0 +1,18 @@
+﻿@model DiscountsSystem.Mvc.ViewModels.HomeIndexViewModel
+
+@{
+    ViewData["Title"] = "Home";
+}
+
+<h1>DiscountsSystem MVC</h1>
+
+<p>@Model.Message</p>
+
+@if (Model.ApiReachable)
+{
+    <p><strong>API Status:</strong> Reachable </p>
+}
+else
+{
+    <p><strong>API Status:</strong> Not reachable </p>
+}

@@ -1,0 +1,45 @@
+@model DiscountsSystem.Mvc.ViewModels.Offers.OffersIndexViewModel
+
+@{
+    ViewData["Title"] = "Offers";
+}
+
+<h1>Offers</h1>
+
+@if (!string.IsNullOrWhiteSpace(Model.ErrorMessage))
+{
+    <div style="color: darkred; margin-bottom: 12px;">
+        <strong>Error:</strong> @Model.ErrorMessage
+    </div>
+}
+
+@if (Model.Items is null || Model.Items.Count == 0)
+{
+    <p>No offers to display yet.</p>
+}
+else
+{
+    <table border="1" cellpadding="8" cellspacing="0">
+        <thead>
+        <tr>
+            <th>Id</th>
+            <th>Title</th>
+            <th>Original Price</th>
+            <th>Discount Price</th>
+            <th>End Date (UTC)</th>
+        </tr>
+        </thead>
+        <tbody>
+        @foreach (var item in Model.Items)
+        {
+            <tr>
+                <td>@item.Id</td>
+                <td>@item.Title</td>
+                <td>@item.OriginalPrice</td>
+                <td>@item.DiscountPrice</td>
+                <td>@item.EndDateUtc</td>
+            </tr>
+        }
+        </tbody>
+    </table>
+}
