@@ -44,21 +44,4 @@ The solution follows a layered structure:
 - .NET SDK (compatible with the solution)
 - SQL Server (local or Docker)
 
-### Configuration (Important)
-This repo does **not** include development secrets.
-Create your own `appsettings.Development.json` in:
-- `DiscountsSystem.Api`
-- `DiscountsSystem.Mvc`
-- `DiscountsSystem.Worker`
-
-Add your local configuration such as:
-- SQL Server connection string
-- JWT settings (issuer/audience/key)
-- any email/SMTP settings (if used)
-
-> Tip: Keep secrets out of source control. Use User Secrets or environment variables for local development.
-
-### Database Setup
-From the solution root (or the project that contains migrations), run:
-```bash
-dotnet ef database update
+  
