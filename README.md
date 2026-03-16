@@ -1,4 +1,4 @@
-# Discounts System (Independent Backend Project)
+# Discounts System
 
 Role-based discounts marketplace backend with moderation workflows, time-limited reservations, purchases and automated cleanup via background workers.
 
@@ -31,12 +31,12 @@ The system includes automated background processing to clean up expired reservat
 
 ## Architecture
 The solution follows a layered structure:
-- `DiscountsSystem.Domain` — domain entities and core rules
-- `DiscountsSystem.Application` — use-cases, services, DTOs, validation contracts
-- `DiscountsSystem.Infrastructure` — EF Core persistence, repositories, external integrations
-- `DiscountsSystem.Api` — Web API endpoints, middleware, auth, versioning, Swagger
-- `DiscountsSystem.Mvc` — MVC layer (UI) in the same solution
-- `DiscountsSystem.Worker` — background hosted services for scheduled cleanup tasks
+- `DiscountsSystem.Domain` - domain entities and core rules
+- `DiscountsSystem.Application` - use-cases, services, DTOs, validation contracts
+- `DiscountsSystem.Infrastructure` - EF Core persistence, repositories, external integrations
+- `DiscountsSystem.Api` - Web API endpoints, middleware, auth, versioning, Swagger
+- `DiscountsSystem.Mvc` - MVC layer (UI) in the same solution
+- `DiscountsSystem.Worker` - background hosted services for scheduled cleanup tasks
 
 ## Getting Started
 
